@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    /* PRIMARY COLORS */
+    --red:hsl(0, 78%, 62%);
+    --cyan:hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue:hsl(212, 86%, 64%);
+    /* NEUTRAL COLORS */
+    --dark-blue:hsl(234, 12%, 34%);
+    --gray-blue: hsl(229, 6%, 66%);
+    --ligth-gray:hsl(0, 0%, 98%);
+    /* FONTS */
+    --primary-font:'Poppins', sans-serif;
+    /* 200,400,600 */
+}
+*, * ::before, * ::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: var(--primary-font);
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--ligth-gray);
+}
+
+.grid{
+    display: grid;
+}
+.main-section{
+    padding: 9.2rem 3.2rem;
+    grid-template-columns: 1fr;
+    width: 375px;
+    height: 100%;
+    margin: 0 auto;
+}
+.title{
+    font-size: 2.4rem;
+    color: var(--dark-blue);
+    text-align: center;
+    margin: 0;
+}
+.subheading{
+    font-weight: 200;
+}
+.heading-description{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--gray-blue);
+    margin-bottom: 8.1rem;
+}
+.card{
+    overflow: hidden;
+    width: 100%;
+    height: 224px;
+    padding: 3rem;
+    background-color: white;
+    margin-bottom: 2.6rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px hsl(229, 6%, 85%);
+    position: relative;
+}
+.card-title{
+    font-size: 2rem;
+    margin: 0;
+    color: var(--dark-blue);
+}
+.card-text{
+    font-size: 1.3rem;
+    color: var(--gray-blue);
+}
+.card img{
+    position: absolute;
+    right: 3rem;
+    height: 5.8rem;
+    bottom: 3rem;
+}
+.deco{
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top:0;
+    left: 0;
+}
+.deco-1{
+    background-color: var(--cyan);
+}
+.deco-2 {
+    background-color: var(--red);
+}
+.deco-3 {
+    background-color: var(--orange);
+}
+.deco-4 {
+    background-color: var(--blue);
+}
+@media screen and (min-width: 1000px) {
+
+    .main-section{
+        width: 1000px;
+        max-width: 1200px;
+        grid-template-columns: repeat(3, minmax(0, auto));
+        grid-template-rows: repeat(5, minmax(0, auto));
+        align-items: center;
+        justify-items: center;
+
+    }
+    .card{
+        margin-bottom: 0;
+        
+    }
+    .heading{
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+    .subheading{
+        font-size: 3.5rem;
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    .title{
+        font-size: 3.5rem;
+        
+    }
+    .heading-description{
+        max-width: 507px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+    .main-section .card:first-of-type{
+    grid-column: 1/2;
+    grid-row: 4/6;
+    margin-right: 3rem;
+}
+.main-section .card:nth-of-type(2) {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    margin-bottom: 3rem;
+}
+.main-section .card:nth-of-type(3) {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+.main-section .card:nth-of-type(4) {
+    grid-column: 3/4;
+    grid-row: 4/6;
+    margin-left: 3rem;
+}
+    
+}
+@media screen and (min-width: 1400px){
+    .main-section{
+        min-width: 1190px;
+    }
+    .card{
+        width: 354px;
+        height: 252px;
+    }
+}
+
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+
+
+
+
