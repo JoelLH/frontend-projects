@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root{
+    --cyan: hsl(171, 66%, 44%);
+    --light-blue:hsl(233, 100%, 69%);
+    --dark-gray-blue: hsl(210, 10%, 33%);
+    --light-gray-blue:hsl(201, 11%, 66%);
+    /* FONTS */
+    --main-font:'Bai Jamjuree', sans-serif;
+    /* 400, 600, size: 18px */
+
+
+}
+
+*{
+    box-sizing: border-box;
+}
+html, body{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul, ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+main{
+    font-family: var(--main-font);
+    padding: 0 3.2rem;
+    width: 100vw;
+    background-image: url(/images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+}
+.flex-container{
+    display: flex;
+}
+section{
+    max-width: 500px;
+    margin-bottom: 16.7rem;
+    flex-flow: column;
+}
+.hero{
+    flex-flow: column;
+    align-items: center;
+}
+.hero-logo{
+    margin-top: 12.3rem;
+    height: 12.7rem;
+    width: 12.7rem;
+}
+.hero-heading{
+    font-size: 3.2rem;
+    text-align: center;
+    color: var(--dark-gray-blue);
+    margin-top: 7.3rem;
+    margin-bottom: 2.3rem;
+}
+.hero-description{
+    text-align: center;
+    font-size: 1.62rem;
+    color: var(--light-gray-blue);
+    line-height: 2.6rem;
+    margin: 0;
+}
+.btn-container{
+    flex-flow: column;
+    margin-top: 5.2rem;
+    gap: 2.4rem;
+    width: 100%;
+    align-items: center;
+}
+.btn{
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 1.6rem;
+    color: white;
+    border-radius: 3rem;
+    transition: all ease .3s;
+    max-width: 312px;
+    
+}
+.btn:hover{
+    filter: brightness(115%);
+}
+.btn-green{
+    background-color: var(--cyan);
+    border-bottom: 3px solid hsl(171, 66%, 37%);
+    box-shadow: 0 10px 10px hsl(171, 66%, 89%);
+}
+.btn-purple {
+    background-color: var(--light-blue);
+    border-bottom: 3px solid hsl(233, 100%, 62%);
+    box-shadow: 0 10px 10px hsl(233, 100%, 89%);
+}
+.track-section{
+    align-items: center;
+    margin-bottom: 13rem;
+}
+.section-h2{
+    font-size: 2.7rem;
+    text-align: center;
+    color: var(--dark-gray-blue);
+}
+.section-description{
+    text-align: center;
+    font-size: 1.62rem;
+    color: var(--light-gray-blue);
+    line-height: 2.6rem;
+    margin: 0;
+    margin-bottom: 6.7rem;
+}
+.track-img-text-container{
+    flex-flow: column;
+    gap: 6rem;
+}
+.track-img{
+    width: 100%;
+}
+.track-data-wrapper{
+    flex-flow: column;
+    align-items: center;
+    gap: 5.7rem;
+    text-align: center;
+    height: auto;
+}
+.section-h3{
+    font-size: 2.2rem;
+    margin-top: 0;
+    color: var(--dark-gray-blue);
+    margin-bottom: 1rem;
+}
+.data-text{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.access-section{
+    margin-bottom: 12rem;
+}
+.supercharge-section h2{
+    margin-bottom: 1.7rem;
+}
+.supercharge-content{
+    flex-flow: column;
+    align-items: center;
+    gap: 5.8rem
+}
+.supercharge-item-box{
+    text-align: center;
+}
+.supercharge-icon{
+    margin-bottom: 5rem;
+}
+.logo-banner{
+    align-items: center;
+    gap: 6rem
+}
+.banner-logo{
+    width: 14.2rem;
+}
+.banner-logo:nth-of-type(2){
+    width: 12rem;
+}
+.banner-logo:nth-of-type(4) {
+    width: 12rem;
+}
+.banner-logo:nth-of-type(5) {
+    width: 12rem;
+}
+.clipboard-section .section-description{
+    margin-bottom: 0;
+}
+.main-footer{
+    background-color:hsl(201, 11%, 96%);
+    flex-flow: column;
+    align-items: center;
+}
+.footer-logo{
+    width: 5.6rem;
+    height: 5.6rem;
+    margin-top: 5.5rem;
+    margin-bottom: 4.6rem;
+}
+.footer-links{
+    flex-flow: column;
+    color: hsl(210, 10%, 50%);
+    font-size: 1.8rem;
+    font-family: var(--main-font);
+    align-items: center;
+    gap: 3.5rem;
+    margin-bottom: 5.3rem;
+
+}
+.footer-icons{
+    gap: 3rem;
+    padding-bottom: .3rem;
+}
+.main-footer a:hover{
+    color: var(--cyan);
+    
+}
+.footer-icons img:hover{
+    filter: invert(.5) sepia(1) saturate(66) hue-rotate(171deg) brightness(100%);
+    /* hsl(171, 66%, 44%) */
+    
+}
+
+@media screen and (min-width: 1200px) {
+    html{
+        font-size: 12px;
+    }
+    section{
+        max-width: 100%;
+    }
+    main{
+        background-image: url(/images/bg-header-desktop.png);
+    }
+    .hero-heading{
+        font-size: 3.7rem;
+    }
+    .hero-logo{
+        width: 127px;
+        height: 127px;
+    }
+    .section-description,.hero-description{
+        max-width: 690px;
+    }
+    .btn-container{
+        flex-flow: row;
+        margin-top: 49px;
+        justify-content: center;
+    }
+    .btn{
+        font-size: 1.4rem;
+        padding: 1.35rem 1rem;
+        width: 230px;
+    }
+    .hero{
+        margin-bottom: 120px
+    }
+    .track-section{
+        width: 100%;
+    }
+    .track-img-text-container{
+        flex-flow: row;
+        gap: 0;
+        position: relative;
+    }
+    .track-img{
+        margin-left:-5% ;
+        height: 37vw;
+        width: auto;
+    }
+    .track-data-wrapper{
+        text-align: left;
+        padding-left: 10rem;
+        padding-right: 17%;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4rem;
+    }
+    .section-h3{
+        font-size: 2rem;
+    }
+    .data-text{
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    .access-section{
+        align-items: center;
+        margin-bottom: 70px;
+    }
+    .supercharge-section{
+        align-items: center;
+        margin-bottom: 7.5rem;
+    }
+    .supercharge-content{
+        flex-flow: row;
+    }
+    .supercharge-section .section-description{
+        margin-bottom: 6rem;
+    }
+    .supercharge-item-box{
+        max-width: 345px;
+    }
+    .supercharge-item-box .data-text{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .supercharge-icon{
+        margin-bottom: 3rem;
+    }
+    .logo-banner{
+        flex-flow: row;
+        gap: 8rem;
+    }
+    .main-footer, .footer-links{
+        flex-flow: row;
+    }
+    .main-footer{
+        align-items: center;
+        padding: 3rem 18rem;
+        gap: 10rem
+    }
+    .footer-links{
+        width: 470px;
+        display: grid;
+        margin: 0;
+        font-size: 1.5rem;
+        row-gap: 1rem;
+        column-gap: 5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer-logo{
+        margin: 0;
+        width: 55px;
+        height: 55px;
+    }
+    .footer-icons{
+        flex-grow: 1;
+        justify-content: end;
+    }
+    
+    
+}
