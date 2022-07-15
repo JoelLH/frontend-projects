@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    /* FONTS */
+    --title: 'Poppins', sans-serif;
+    /* 400, 600 */
+    --body: 'Open Sans', sans-serif;
+    /* 400 */
+}
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px;
+}
+.main{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+.hero{
+    background-color: var(--violet);
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.grid{
+    display: grid;
+    z-index: 2;
+}
+.hero-grid{
+    width: 375px;
+    height: 800px;
+    padding: 2rem 3.6rem;
+    grid-template-columns: 1fr;
+
+}
+.hero-logo{
+    width: 12.5rem;
+    height: 6rem;
+    margin-bottom: 2.5rem;
+    
+}
+.hero-img{
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+.bg-img{
+    position: absolute;
+    width: 100%;
+    max-height: 70%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.bg-img-desktop{
+    display: none;
+}
+.hero-data{
+    text-align: center;
+    height: fit-content;
+}
+.hero-title{
+    font-family: var(--title);
+    color: white;
+    font-size: 2.5rem;
+    margin: 1rem 0 0 0;
+}
+.hero-description{
+    color: white;
+    font-family: var(--body);
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--violet);
+    background-color: white;
+    font-size: 1.5rem;
+    font-family: var(--title);
+    padding: .9rem 6.5rem;
+    border-radius: 30px;
+    margin-top: .8rem;
+    transition: all ease .3s;
+}
+.hero-btn:hover{
+    background-color: var(--soft-magenta);
+    color: white;
+}
+.hero-social-container{
+    text-align: center;
+    margin-top: 4rem;
+}
+.bi{
+    font-size: 1.3rem;
+    color: white;
+    padding: .6rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: .3rem;
+    transition: all ease .3s;
+    
+}
+.bi:hover{
+    color: var(--soft-magenta);
+    border-color: var(--soft-magenta)
+}
+@media screen and (min-width: 1280px) {
+    .hero-grid{
+        width: 1440px;
+        height: 800px;
+        padding: 6rem 8rem 4rem 6rem;
+        grid-template-columns: 1.1fr .9fr;
+        grid-template-rows: minmax(0, auto) minmax(0, auto) minmax(0, auto);
+    }
+    .bg-img{
+        display: none;
+    }
+    .bg-img-desktop{
+        position: absolute;
+        width: 93%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+    }
+    .hero-logo{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-bottom: 80px;
+        width: 202px;
+        height: 6rem;
+    }
+    .hero-img{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin: 0;
+    }
+    .hero-data{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        text-align: left;
+        padding: 4rem 5.1rem;
+    }
+    .hero-title{
+        font-size: 4rem;
+    }
+    .hero-description{
+        font-size: 1.7rem;
+    }
+    .hero-social-container{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        margin-top: 0;
+        align-self: flex-end;
+        justify-self: end;
+    }
+    .bi{
+        font-size: 1.9rem;
+        padding: 9px 1rem;
+    }
+    .hero-btn{
+        font-size: 1.8rem;
+        padding: 1.4rem 6.5rem;
+    }
+}
