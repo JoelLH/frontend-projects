@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+    /* FONTS */
+    --main-font: 'Lexend Deca', sans-serif;
+    --title-font: 'Big Shoulders Display', cursive;
+    /* PRIMARY COLORS */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* NEUTRAL COLOR */
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+    /* (background, headings, buttons) */
+}
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 15px;
+}
+
+body{
+    background-color: var(--light-gray);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.cards-wrapper{
+    min-width: 327px;
+    max-width: 400px;
+    margin: 88px 25px 0;
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column;
+}
+.card{
+    padding: 47px;
+    display: flex;
+    flex-flow: column;
+    background-color: gray;
+}
+.card:first-of-type {
+    background-color: var(--bright-orange);
+}
+.card:first-of-type a{
+    color: var(--bright-orange);
+}
+.card:nth-of-type(2) {
+    background-color: var(--dark-cyan);
+}
+.card:nth-of-type(2) a{
+    color: var(--dark-cyan);
+}
+.card:nth-of-type(3) {
+    background-color: var(--very-dark-cyan);
+}
+.card:nth-of-type(3) a{
+    color: var(--very-dark-cyan);
+}
+.card-icon{
+    height: 41px;
+    width: 65px;
+}
+.card-title{
+    font-family: var(--title-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--light-gray);
+    font-size: 2.5rem;
+}
+.card-text{
+    font-family: var(--main-font);
+    color: var(--paragraphs);
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: 1.5rem;
+}
+.card-btn{
+    font-family: var(--main-font);
+    text-decoration: none;
+    background-color: var(--light-gray);
+    width: 148px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: all ease .3s;
+}
+
+.card .card-btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--light-gray);
+    color: var(--light-gray);
+}
+@media screen and (min-width: 1000px) {
+    .cards-wrapper{
+        flex-flow: row;
+        max-width: 920px;
+        height: 500px;
+    }
+    .card-btn{
+        margin-top: auto;
+    }
+    
+}
