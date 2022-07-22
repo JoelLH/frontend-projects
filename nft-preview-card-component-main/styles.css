@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    /* PRIMARY */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    /* ### Neutral */
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    ---White: hsl(0, 0%, 100%);
+    /* FONT */
+    --main-font: 'Outfit', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+body,html{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-family: var(--main-font);
+    background-color: var(--main-bg);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+a{
+    text-decoration: none;
+}
+.nft-card{
+    background-color: var(--card-bg);
+    height: 545px;
+    width: 330px;
+    padding: 23px;
+    border-radius: 12px;
+    color: var(--Soft-blue);
+}
+.nft-img{
+    width: 100%;
+    height: 280px;
+    background: url(images/image-equilibrium.jpg) center/cover;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    
+}
+.img-overlay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsla(178, 100%, 50%, 60%);
+    opacity: 0;
+    transition: all ease .3s; 
+}
+.img-overlay:hover{
+    opacity: 1;
+}
+.nft-card h1{
+    margin-top: 20px;
+}
+.title{
+    font-size: 22px;
+    color: var(---White);
+    
+}
+.card-text{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.eth-number, .time-left{
+    display: inline-flex;
+    flex-flow: row;
+    gap: 5px;
+    font-size: 17px;
+}
+.eth-number{
+    color: var(--Cyan);
+}
+.flex-container{
+    display: flex;
+    flex-flow: column;
+    
+}
+.price-time-wrapper{
+    flex-flow: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.creator-section {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row;
+    gap: 13px; 
+    align-items: center;
+    border-top: 2px solid var(--line);
+    font-size: 17px
+}
+
+.creator-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.creator{
+    color: var(---White);
+}
+.title:hover, .creator:hover{
+    color: var(--Cyan)
+}
