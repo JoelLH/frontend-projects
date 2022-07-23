@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    /*  Primary */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+     /*  Neutral  */
+    --dark-gray: hsl(0, 0%, 59%);
+    /* FONTS */
+    --main-font: 'Kumbh Sans', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px;
+}
+body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--main-font);
+    background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+    background-color: var(--dark-cyan);
+    background-position: left -350px top -350px, right -350px bottom -350px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: calc(600px + 10%), calc(600px + 10%);
+    
+}
+.card{
+    background-color: white;
+    width: 327px;
+    height: 375px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card-bg{
+    background: url(/images/bg-pattern-card.svg);
+    width: 100%;
+    height: 140px;
+}
+.user-img{
+    border-radius: 50%;
+    height: 108px;
+    width: 108px;
+    border: 5px solid white;
+    margin: -54px auto 0;
+    display: block;
+}
+.bold-text{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--very-dark-blue);
+}
+.alt-text{
+    color: var(--dark-gray)
+}
+.user-name{
+    text-align: center;
+    margin-top: 23.5px;
+}
+.user-age{
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+.city{
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+.user-statistics{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid rgb(225, 225, 225);
+    height: 78px;
+}
+.statistics-number, .item-title{
+    text-align: center;
+    margin: 0;
+}
+.statistics-number{
+    margin-bottom: 3px;
+}
+.item-title{
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+@media screen and (min-width: 1000px) {
+    body{
+        background-size: calc(750px + 10%), calc(750px + 10%);
+    }
+}
