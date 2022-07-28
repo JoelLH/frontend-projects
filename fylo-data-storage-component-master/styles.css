@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{
+    /* FONT */
+    --main-font: 'Raleway', sans-serif;
+    /* 400, 700 */
+    /* COLORS */
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --darker-blue: hsl(229, 57%, 11%);
+    /* GRADIENT- Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%) */
+}
+*, * ::before, * ::after{
+    box-sizing: border-box;
+}
+html, body{
+    padding: 0;
+    margin: 0;
+}
+p{
+    margin :0;
+    
+}
+
+body{
+    min-height: 100vh;
+    background: url(/images/bg-mobile.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font);
+    font-size: 14px;
+    gap: 5rem
+}
+.main-content{
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
+.card{
+    width: 325px;
+    display: grid;
+    place-items: center;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+
+}
+.first-card{
+    
+    border-top-right-radius: 100px;
+    padding: 47px 109px 40px 40px;
+    grid-template-columns: repeat(3, minmax(0, auto));
+    row-gap: 30px;
+    
+}
+.logo{
+    grid-column: 1/4;
+    justify-self: start;
+    height: 40px;
+}
+.fc-icon-container{
+background-color: var(--darker-blue);
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: start;
+    border-radius: 7px;
+}
+.second-card{
+    padding: 32px 30px 52px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 17px;
+    position: relative;
+
+}
+.sc-text{
+    grid-column: 1/4;
+    color: var(--pale-blue)
+}
+.bold{
+    font-weight: 700;
+}
+.loader-container{
+    grid-column: 1/4;
+    width: 100%;
+    height: 20px;
+    padding: 3px;
+    background-color:hsl(229, 57%, 19%);
+    border-radius: 20px;
+    overflow: hidden
+}
+.loader{
+    width: 81.5%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    text-align: right;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.loader-deco{
+    width: 10px;
+    height: 10px;
+    background-color: var(--pale-blue);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2px;
+}
+.gb-markup{
+    color: var(--pale-blue);
+    font-size: .9em;
+    margin-top: -5%;
+}
+.left-align{
+    justify-self: start;
+}
+.right-align {
+    justify-self: end;
+}
+.gb-left-container{
+    position: absolute;
+    bottom: -25%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 2.5rem;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.gb-left-text{
+    color: var(--darker-blue);
+}
+.gb-left-text-alt{
+    font-size: .32em;
+    letter-spacing: 1px;
+    color: var(--grayish-blue);
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+@media screen and (min-width: 1000px) {
+    body{
+        background: url(/images/bg-desktop.png) center/cover;
+    }
+    .main-content{
+        flex-flow: row;
+        gap: 30px;
+        width: 80%;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .first-card{
+        width: 350px;
+        padding-right: 134px;
+    }
+    .second-card{
+        width: 60%;
+        min-width: 325px;
+        max-width: 540px;
+        padding: 32px 30px;
+        height: 155px;
+    }
+    .sc-text{
+        justify-self: start;
+    }
+    .gb-left-container{
+        top: -35%;
+        right: 30px;
+        bottom: unset;
+        border-bottom-right-radius: unset;
+    }
+    .gb-left-container::after{
+        content: "";
+        position: absolute;
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-bottom: 18px solid white;
+        border-top: 18px solid transparent;
+        display: inline-block;
+        transform: rotate(45deg);
+        bottom: -23%;
+        right: -18px;
+    }
+}
