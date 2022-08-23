@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    /* COLORS */
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);   
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --darker-blue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+    /* FONT */
+    --main-font: 'Overpass', sans-serif;
+    /* 400,700 */
+}
+*{
+    box-sizing: border-box;
+}
+body, html{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 45px;
+    background-color: var(--darker-blue);
+    font-family: var(--main-font);
+    font-size: 15px;
+}
+
+/* MAIN CONTENT */
+
+.card{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    min-width: 330px;
+    max-width: 415px;
+    min-height: 360px;
+    max-height: 415px;
+    border-radius: 15px;
+    background-color: #1c232d;
+    
+    padding: 23px;
+    color: var(--light-grey);
+}
+.card > *{
+    margin: 0;
+}
+.star-container{
+    width: 40px;
+    height: 40px;
+    background-color: #262f38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.star-container img{
+    width: 14px;
+    height: 14px;
+}
+.question{
+    color: var(--white);
+    border-top: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.description{
+    font-size: 15px;
+    line-height: 160%;
+    letter-spacing: -.5px;
+}
+.ratings-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.number-container{
+    width: 40px;
+    height: 40px;
+    padding-top: 4px;
+    background-color: #262f38;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-decoration: none;
+    height: 43px;
+    padding-top: 2px;
+    background-color: var(--orange);
+    border-radius: 25px;
+}
+.selected{
+    background-color: var(--orange);
+    color: var(--white)
+}
+
+/* STATES */
+.number-container:hover{
+    background-color: var(--light-grey);
+    color: white;
+}
+.submit-btn:active{
+    background-color: var(--white);
+    color: var(--orange);
+}
+/* TY CARD */
+.selected-p {
+    color: var(--orange);
+    background-color: #262f38;
+    padding: .5rem 1.1rem .4rem;
+    border-radius: 20px;
+    display: none;
+}
+
+.ty-title {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    display: none;
+}
+
+.ty-description {
+    line-height: 140%;
+    width: 99%;
+    display: none;
+}
+.ty-img{
+    display: none;
+}
+/* TY STATE */
+.card.ty-state {
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.selected-p.ty-state  {
+    color: var(--orange);
+    background-color: #262f38;
+    padding: .5rem 1.1rem .4rem;
+    border-radius: 20px;
+    display: unset;
+}
+
+.ty-title.ty-state {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0;
+    display: unset;
+}
+
+.ty-description.ty-state {
+    line-height: 160%;
+    width: 99%;
+    display: unset;
+}
+.ty-img.ty-state{
+    display: unset;
+}
+@media screen and (min-width: 800px) {
+    .card{
+        padding: 30px;
+        height: 415px;
+        padding-right: 40px;
+    }
+    .card.ty-state{
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    .question{
+        font-size: 1.75rem;
+    }
+    .description{
+        letter-spacing: unset;
+    }
+    .star-container, .number-container{
+        width: 50px;
+        height: 50px;
+    }
+    .star-container img{
+        width: 16px;
+        height: 16px;
+    }
+    .number-container{
+        font-size: 1.05rem;
+    }
+    .submit-btn{
+        height: 45px;
+    }
+    .ty-title {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0;
+    display: none;
+    }
+    .ty-description {
+    line-height: 160%;
+    width: 99%;
+    display: none;
+    }
+    
+}
+

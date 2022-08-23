@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 13px; text-align: center; color: white; margin-top: 1rem; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <script>
+    $(document).ready(function(){
+      let value;
+      $(".number-container").click(function (e) {
+        //Spot switcher:
+        $(this).parent().find(".number-container").removeClass("selected");
+        $(this).addClass("selected");
+        value= e.target.innerHTML
+      });
+
+      $(".submit-btn").click(function(){
+
+        if(value){
+          $(".card, .selected-p, .ty-title, .ty-description,.ty-img").addClass("ty-state")
+          $(".star-container, .question, .description, .ratings-container, .submit-btn").css("display", "none")
+          $(".selected-p").text(`You selected ${value} out of 5`)
+        }else{
+          return alert("Please choose a rating")
+        }
+      })
+    });
+
+  </script>
+  <!-- Rating state start -->
+  <div class="card">
+    <div class="star-container">
+      <img src="/images/icon-star.svg" alt="star-icon">
+    </div>
+    <h2 class="question">How did we do?</h2>
+    <p class="description">
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+    </p>
+    <div class="ratings-container">
+      <span class="number-container " value="1">1</span>
+      <span class="number-container" value="2">2</span>
+      <span class="number-container" value="3">3</span>
+      <span class="number-container" value="4">4</span>
+      <span class="number-container" value="5">5</span>
+    </div>
+    <a href="#" class="submit-btn">Submit</a>
+    <img src="/images/illustration-thank-you.svg" alt="Thank you image" class="ty-img">
+    <p class="selected-p"></p>
+    <h2 class="ty-title">Thank you!</h2>
+    <p class="ty-description">We appreciate you taking the time to give a rating. If you ever need more support,
+    don’t hesitate to get in touch!</p>
+  </div>
+
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/JoelLH">Joel Webdev</a>.
+  </div>
+</body>
+</html>
