@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+
+    <div class="container">
+      <div class="main__header">
+        <h2 class="main__title dark">
+          Simple, traffic-based pricing
+        </h2>
+        <p class="main__subtitle light">
+          Sign-up for our 30-day trial.<br> No credit card required.
+        </p>
+
+      </div>
+
+      <div class="card">
+        <div class="card__body">
+          <div class="card__header">
+            <h3 class="pageviews light" id="pageviews">
+              100k pageviews
+            </h3>
+            <div class="price-desk">
+              <span class="price__number dark">
+                $<span id="price__num">16</span>.00
+              </span>
+              <span class="price__date light" id="period-toggle">
+                / month
+              </span>
+            </div>
+          </div>
+          
+          <input type="range" id="pricing" name="pricing" min="0" max="4" class="range"
+          oninput="getValue(this.value)"
+          />
+          <div class="price">
+            <span class="price__number dark" >
+              $<span id="price__num">16</span>.00
+            </span>
+            <span class="price__date light" id="period-toggle">
+              / month
+            </span>
+          </div>
+          <div class="option-discount">
+            <span class="option__text monthly-text light">Monthly Billing</span>
+            <span class="toggler" id="period-toggler-btn"
+            onclick="periodToggle()"
+            >
+              <span class="toggler__circle"></span>
+            </span>
+            <span class="option__text yearly-text light">Yearly Billing</span>
+            <span class="discount">
+              -25% <span class="discount-toggle">disctount</span>
+            </span>
+          </div>
+        </div>
+        <div class="card__footer">
+          <ul class="features-list">
+            <li class="list__item">
+              <img src="/images/icon-check.svg" alt="" class="list__icon">
+              <span class="list__text light">Unlimited websites</span>
+            </li>
+            <li class="list__item">
+              <img src="/images/icon-check.svg" alt="" class="list__icon">
+              <span class="list__text light">100% data ownership</span>
+            </li>
+            <li class="list__item">
+              <img src="/images/icon-check.svg" alt="" class="list__icon">
+              <span class="list__text light">Email reports</span>
+            </li>
+          </ul>
+          <a href="#" class="card__btn light">
+            Start my trial
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
+
+  
+  <script src="main.js"></script>
+</body>
+</html>

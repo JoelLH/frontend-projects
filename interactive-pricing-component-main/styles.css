@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+
+
+:root{
+    --main-font:'Manrope', sans-serif;
+    /*-------------- COLORS --------------*/
+    --soft-cyan : hsl(174, 77%, 80%);
+    /* (Full Slider Bar) */
+    --strong-cyan : hsl(174, 86%, 45%);
+/* (Slider Backround) */
+    --light-grayish-red : hsl(14, 92%, 95%);
+/* (Discount Background) */
+    --light-red : hsl(15, 100%, 70%);
+/* (Discount Text) */
+    --pale-blue : hsl(226, 100%, 87%);
+/* (CTA Text) */
+
+/* --------------NEUTRAL-------------- */
+    --white : hsl(0, 0%, 100%);
+/* (Pricing Component Background) */
+    --very-pale-blue : hsl(230, 100%, 99%);
+/* (Main Background) */
+    --light-grayish-blue : hsl(224, 65%, 95%);
+/* (Empty Slider Bar) */
+    --light-grayish-blue2 : hsl(223, 50%, 87%);
+/* (Toggle Background) */
+    --grayish-blue : hsl(225, 20%, 60%);
+/* (Text) */
+    --dark-desaturated-blue : hsl(227, 35%, 25%);
+/* (Text & CTA Background) */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--main-font);
+    background: url(/images/bg-pattern.svg) 0 0/ 100%  37.5% no-repeat; 
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+ul,ol{
+    padding: 0;
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* REUSABLE CLASES */
+
+.dark{
+    color: var(--dark-desaturated-blue);
+    font-weight: 800;
+}
+
+.light{
+    color: var(--grayish-blue);
+}
+
+/* MAIN */
+
+main{
+    width: 100%;
+    min-height: 100vh;    
+}
+.container{
+    margin-top: 110px;
+    margin: 110px 25px 0; 
+}
+.main__header{
+    text-align: center;
+    padding: 22.5px 0;
+    position: relative;
+    background: url(/images/pattern-circles.svg) center/contain no-repeat;
+    margin-bottom: 10px;
+}
+
+.main__title{
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+.main__subtitle{
+    font-size: 15px;
+    margin-top: 0;
+}
+
+/* CARD */
+.card{
+    background-color: var(--white);
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px 0px hsl(0, 0%, 90%);
+    max-width: 800px;
+    margin: 0 auto;
+}
+.price-desk{
+    display: none;
+}
+.card__body{
+    padding: 36px 28px;
+    text-align: center;
+}
+.pageviews{
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+input[type="range"]{
+    -webkit-appearance: none;
+        width: 100%;
+        height: 8px;
+        background: var(--light-grayish-blue);
+        border-radius: 5px;
+        background-image: linear-gradient(var(--soft-cyan), var(--soft-cyan));
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: url(/images/icon-slider.svg) center no-repeat, var(--strong-cyan);
+    cursor: ew-resize;
+    box-shadow: 0 10px 10px 0 var(--soft-cyan);
+    transition: background .3s ease-in-out;
+}
+.input[type="range"]::-webkit-slider-thumb:hover{
+    filter: brightness(80%);
+}
+.range{
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.price__number{
+    font-size: 2rem;
+    margin-right: 5px;
+}
+.option-discount{
+    font-size: .80em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggler{
+    width: 43px;
+    height: 23px;
+    padding: 3px 3px;
+    background-color: var(--light-grayish-blue2);
+    border-radius: 20px;
+    margin: 0px 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.toggler__circle{
+    display: block;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    background: var(--white);
+}
+.discount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 5px;
+    font-size: .75em;
+    font-weight: 800;
+    border-radius: 20px;
+    background-color: var(--light-grayish-red);
+    color: var(--light-red);
+    margin-left: 8px;
+}
+.discount-toggle{
+    margin-left: 2px;
+    display: none;
+}
+/* CARD FOOTER */
+.card__footer{
+    border-top: 1px solid var(--light-grayish-blue);
+    text-align: center;
+    font-size: .85em;
+    padding: 23px 0;
+}
+.features-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+    margin-bottom: 23px;
+
+}
+.list__icon{
+    margin-right: 10px;
+}
+.card__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: var(--dark-desaturated-blue);
+    padding: .8rem 3rem;
+    border-radius: 30px;
+    font-weight: 800;
+    color: var(--pale-blue);
+}
+.card__btn:hover{
+    color: var(--white);
+}
+@media screen and (min-width: 900px) {
+    body{
+        background: url(/images/bg-pattern.svg) 0 0/ 100% 48% no-repeat;
+    }
+    .card{
+        width: 540px;
+        height: 400px;
+    }
+    br{
+        display: none;
+    }
+    .main__header{
+        margin-bottom: 60px;
+    }
+    .main__title{
+        font-size: 1.8rem;
+    }
+    .price{
+        display: none;
+    }
+    .card__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .pageviews{
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .price__number{
+        font-size: 40px;
+    }
+    .price-desk{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .range{
+        margin-bottom: 45px;
+    }
+    .discount-toggle{
+        display: unset;
+    }
+    .card__footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+    .features-list{
+        align-items: flex-start;
+        width: 50%;
+        
+    }
+    .card__btn{
+        margin: 0;
+        margin-left: auto;
+    }
+    
+}
