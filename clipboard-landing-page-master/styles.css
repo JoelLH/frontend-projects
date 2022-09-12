@@ -34,7 +34,7 @@ ul, ol{
 main{
     font-family: var(--main-font);
     padding: 0 3.2rem;
-    width: 100vw;
+    width: 100%;
     background-image: url(/images/bg-header-mobile.png);
     background-repeat: no-repeat;
     background-size: 100%;
