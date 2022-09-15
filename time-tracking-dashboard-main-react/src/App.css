@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+/* - Font size: 18px (card titles e.g. Work, Play) */
+
+:root{
+    --blue: hsl(246, 80%, 60%);
+    --work-bg: hsl(15, 100%, 70%);
+    --play-bg: hsl(195, 74%, 62%);
+    --sutdy-bg: hsl(348, 100%, 68%);
+    --exercise-bg: hsl(145, 58%, 55%);
+    --social-bg: hsl(264, 64%, 52%);
+    --selfCare-bg: hsl(43, 84%, 65%);
+
+/* ### Neutral */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-Blue: hsl(236, 100%, 87%);
+
+
+}
+
+body{
+    font-family: 'Rubik', sans-serif !important;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue) !important;
+}
+.App{
+    margin: 80px 25px 80px;
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+}
+section{
+    width: 100%;
+}
+.user-card, .track-card{
+    min-width: 325px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+/* USER SECTION */
+.user-card{
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--dark-blue);
+}
+.user-header{
+    padding: 25px 25px 30px;
+    gap: 15px;
+    background-color: var(--blue);
+    border-radius: 15px;
+}
+.user-img{
+    width: 75px;
+    height: 75px;
+    padding: 2px;
+    background-color: white;
+    border-radius: 50%;
+}
+.user-data{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+.user-text{
+    color: var(--pale-Blue);
+    margin: 0;
+}
+.user-name{
+    color: var(--pale-Blue);
+    font-weight: 400;
+    margin: 0;
+}
+.user-footer{
+    padding: 25px 20px 25px 35px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--desaturated-blue);
+    font-size: 1.2rem;
+}
+.period:hover{
+    color: var(--pale-Blue);
+    cursor: pointer;
+}
+.active{
+    color: var(--pale-Blue);
+}
+/* DASHBOARD SECTION */
+.dashboard-section{
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+}
+.track-card{
+    border-radius: 15px;
+    position: relative;
+    padding-top: 38px;
+    overflow: hidden;
+}
+.track__data{
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    padding: 30px 23px 25px;
+    display: flex;
+    flex-flow: column;
+    gap: 2px;
+    position: relative;
+}
+.track__header{
+    display: flex;
+    align-items: center;
+    
+}
+.track__title{
+    font-size: 18px;
+    font-weight: 400;
+    color: #EFF9FF;
+}
+.track__menu-ico{
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.track__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hours{
+    font-size: 1.85rem;
+    margin: 0;
+    color: #EFF9FF;
+    font-weight: 300;
+}
+.previous{
+    color: var(--pale-Blue);
+    font-size: .95rem;
+}
+.card__img{
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    width: 80px;
+}
+
+#card0 {
+    background-color: var(--work-bg);
+}
+#card1{background-color: var(--play-bg);}
+#card2{background-color: var(--sutdy-bg);}
+#card3{background-color: var(--exercise-bg);}
+#card4{background-color: var(--social-bg);}
+#card5{
+    background-color: var(--selfCare-bg);
+
+}
+#card3 .card__img {
+    top: 0px;
+}
+#card4 .card__img {
+    top: -20px;
+}
+#card5 .card__img{
+    top: -20px;
+}
+
+.track-card:hover{
+    filter: brightness(120%);
+}
+.attribution{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: var(--pale-Blue);
+}
+.attribution a{
+    color: white;
+}
+@media screen and (min-width: 800px) {
+    .App {
+            flex-flow: row;
+            gap: 30px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .App{
+        flex-flow: row;
+        gap:30px;
+        height: 520px;
+    }
+    .user-section{
+        width: 255px;
+    }
+    .user-card{
+        width: 255px;
+        min-width: unset;
+        max-width: unset;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        
+    }
+    .user-header{
+        flex-flow: column;
+        padding: 33px 0 80px 35px;
+        gap: 42px;
+    }
+    .user-name{
+        font-size: 2.6rem;
+        font-weight: 300;
+        color: #EFF9FF;
+    }
+    .user-img{
+        width: 85px;
+        height: 85px;
+    }
+    .user-footer{
+        flex-flow: column;
+        justify-content: space-between;
+        max-height: 100%;
+        flex-grow: 1;
+    }
+    .dashboard-section{
+        flex-flow: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
+        width: 830px;
+        
+    }
+    .track-card{
+        width: 255px;
+        height: 245px;
+        min-width: unset;
+        max-width: unset;
+        display: flex;
+        flex-flow: column;
+        justify-content: end;
+    }
+    .track__data{
+        height: 200px;
+        padding: 30px 30px 30px;
+        justify-content: space-between;
+    }
+    .track__body{
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    .hours{
+        font-size: 3.5rem;
+    }
+}
