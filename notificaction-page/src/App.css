@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+
+:root{
+  --main-font: 'Plus Jakarta Sans', sans-serif;
+  /* COLORS */
+  /* Primary */
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  /* NEUTRAL */
+  --white: hsl(0, 0%, 100%);
+  --lgt-gray-blue-lv3: hsl(210, 60%, 98%);
+  --lgt-gray-blue-2: hsl(211, 68%, 94%);
+  --lgt-gray-blue-1: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --drk-gray-blue: hsl(219, 12%, 42%);
+  --v-dark-blue: hsl(224, 21%, 14%);
+}
+*{
+  box-sizing: border-box;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  font-family: var(--main-font);
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+/* REUSABLE CLASSES */
+
+/* App */
+
+.App{
+  margin: 24px 17px;
+  max-width: 730px;
+}
+/* MAIN */
+/* HEADER */
+.noti-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.noti__left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.noti__title{
+  font-size: 1.25rem;
+  color: var(--v-dark-blue);
+  font-weight: 800;
+}
+.noti__badge{
+  padding: 3px 12px;
+  height: 100%;
+  background-color: var(--blue);
+  font-weight: 800;
+  color: var(--white);
+  border-radius: 5px;
+}
+.mark-btn{
+  background-color: unset;
+  border: unset;
+  color: var(--grayish-blue);
+  font-size: 14px;
+  padding: 0;
+}
+/* NOTIFICATIONS */
+.noti-section{
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+}
+.noti__article{
+  display: flex;
+  align-items: flex-start;
+  padding: 18px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.noti__article.picture {
+  padding: 18px 0px 18px 15px;
+}
+.article__img{
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+.article__data{
+  display: flex;
+  flex-flow: column;
+}
+.article__description{
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--drk-gray-blue);
+}
+.author{
+  color: var(--v-dark-blue);
+  font-weight: 800;
+  margin-right: 5px;
+}
+.post{
+  color: var(--drk-gray-blue);
+  font-weight: 800;
+  margin-left: 5px;
+}
+.article__date{
+  font-size: 14px;
+  color: var(--grayish-blue);
+  margin-top: 3px;
+}
+.article__picture{
+  width: 40px;
+  height: 40px;
+  margin-left: 12px;
+  padding: 2px;
+  border: 1px solid transparent;
+  margin-left: auto;
+}
+.group{
+  font-weight: 800;
+  color: var(--blue);
+}
+.article__msg{
+  color: var(--drk-gray-blue);
+  padding: 15px;
+  border: 1px solid var(--lgt-gray-blue-2);
+  font-size: 14.5px;
+  border-radius: 5px;
+}
+/* ATTRIBUTION */
+.attribution{
+  text-align: right;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.attribution a{
+  color: var(--blue);
+  font-weight: 800;
+}
+/* UNREAD STATES */
+.noti__article.unread{
+  background-color: var(--lgt-gray-blue-lv3);
+}
+.noti__article.unread .article__description{
+  position: relative;
+}
+.noti__article.unread .article__description::after{
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--red);
+  border-radius: 50%;
+  bottom: 4px;
+  margin-left: 5px;
+}
+/* ACTIVE STATES */
+
+.mark-btn:hover, .author:hover, .post:hover, .group:hover{
+  color: var(--blue);
+  
+}
+.article__msg:hover{
+  background-color: var(--lgt-gray-blue-1);
+}
+.article__picture:hover{
+  border: 1px solid var(--lgt-gray-blue-1);
+  border-radius: 5px;
+}
+@media screen and (min-width: 730px) {
+  body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lgt-gray-blue-lv3);
+  }
+  .App{
+    padding: 35px 30px 15px;
+    background-color: var(--white);
+    border-radius: 15px;
+  }
+  .article__description, .article__msg{
+    font-size: 16px;
+  }
+  .noti__article.unread .article__description::after{
+    bottom: 5px;
+  }
+  .noti__title{
+    font-size: 1.5rem;
+  }
+  .mark-btn{
+    font-size: 16px;
+  }
+  .article__img{
+    margin-right: 20px;
+  }
+  .article__picture, .article__img{
+    width: 47px;
+    height: 47px;
+  }
+  .noti__article.picture{
+    padding-right: 15px;
+  }
+  .article__date{
+    font-size: 15.5px;
+  }
+}
