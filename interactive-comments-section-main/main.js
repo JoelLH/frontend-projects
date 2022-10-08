@@ -200,8 +200,11 @@ function sendComment(){
         },
         "replies": []
     }
+    if(textarea.value.length > 0){
+        feed.comments.push(newComment)
+    }
     textarea.value = "";
-    feed.comments.push(newComment)
+    
 }
 
 
