@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Interactive comments section</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <!-- Pull dynamic content from the data.json file -->
+  <div class="container feed" id="feed">
+    
+
+  </div>
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal">
+      <h2 class="modal__title">Delete comment</h2>
+      <p class="modal__body">Are you sure you want to delete this comment? This will remove the comment and can't be undone.</p>
+      <div class="modal__btns">
+        <button class="cancel-btn modal-btn" id="cancelBtn">No, cancel</button>
+        <button class="accept-btn modal-btn" id="deleteBtn">Yes, delete</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/JoelLH">Joel WebDev</a>.
+  </div>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
