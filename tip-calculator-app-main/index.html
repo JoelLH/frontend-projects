@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 16px; text-align: center; margin-top: 10px;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+  </style>
+</head>
+<body>
+  <h1 class="title">Spli <br> tter</h1>
+  <div class="container">
+    <div class="app__inputs">
+      <section class="bill split__section">
+        <label for="bill__input">
+          <h3 class="section-title">
+            Bill
+          </h3>
+          <div class="input-div">
+            <img src="/images/icon-dollar.svg" alt="dollar icon" class="split__icon">
+            <input class="split__input" type="number" id="bill__input" placeholder="Enter bill">
+          </div>
+        </label>
+      </section>
+      <section class="tip split__section">
+        <h3 class="section-title">Select Tip %</h3>
+        <div class="split__radios" id="split__radios">
+          <input type="radio" id="radio-1" name="tip-radios" value="5">
+          <label for="radio-1">
+            <span class="radio-label">5%</span>
+          </label>
+          <input type="radio" id="radio-2" name="tip-radios" value="10">
+          <label for="radio-2">
+            <span class="radio-label">10%</span>
+          </label>
+          <input type="radio" id="radio-3" name="tip-radios" value="15">
+          <label for="radio-3">
+            <span class="radio-label">15%</span>
+          </label>
+          <input type="radio" id="radio-4" name="tip-radios" value="25">
+          <label for="radio-4">
+            <span class="radio-label">25%</span>
+          </label>
+          <input type="radio" id="radio-5" name="tip-radios" value="50">
+          <label for="radio-5">
+            <span class="radio-label">50%</span>
+          </label>
+          <div class="input-div" id="tip-div">
+            <input type="number" class="split__input" id="tip__input" placeholder="Custom">
+          </div>
+      
+        </div>
+      </section>
+      <section class="people split__section">
+        <label for="people-input">
+          <h3 class="section-title">Number of People</h3>
+          <div class="input-div people__input" id="people__input">
+            <img src="/images/icon-person.svg" alt="person-icon" class="split__icon">
+            <input id="people-input" type="number" class="split__input"  placeholder="0" min="1">
+          </div>
+        </label>
+      </section>
+    </div>
+    
+    <section class="result split__section">
+      <div class="result__total-wrapper">
+        <div class="result-text">
+          <span class="result-text-description">
+            Tip Amount
+          </span>
+          <span class="result-text-person">
+            / person
+          </span>
+        </div>
+        <div class="result-total" id="tip-person">
+          $0.00
+        </div>
+      </div>
+      <div class="result__total-wrapper">
+        <div class="result-text">
+          <span class="result-text-description">
+            Total
+          </span>
+          <span class="result-text-person">
+            / person
+          </span>
+        </div>
+        <div class="result-total" id="total-person">
+          $0.00
+        </div>
+      </div>
+      <button class="reset-btn" id="reset-btn">Reset</button>
+    </section>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/joel-lopez-0595ba193/">Joel WebDev</a>.
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
