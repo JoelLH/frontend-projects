@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://spontaneous-mandazi-446e1b.netlify.app/)
+- Solution URL: [Github](https://github.com/JoelLH/frontend-projects/tree/main/coding-bootcamp-testimonials-slider)
+- Live Site URL: [Live Site](https://spontaneous-mandazi-446e1b.netlify.app/)
 
 ## My process
 
